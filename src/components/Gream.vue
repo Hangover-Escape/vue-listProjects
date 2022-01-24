@@ -47,6 +47,7 @@ export default {
           isCheck: item.isCheck,
           name: item.name,
           price: item.price,
+          // count: 1
         });
     }
   },

@@ -43,8 +43,8 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/MyGithubAppPage/',
-    // assetsPublicPath: '/',
+    // assetsPublicPath: '/MyGithubAppPage/',
+    assetsPublicPath: '/vue-listProjects/',
 
     /**
      * Source Maps
