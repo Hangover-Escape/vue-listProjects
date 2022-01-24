@@ -1,0 +1,19 @@
+[{
+  "id": 1,
+  "name": "苹果",
+  "price": 10,
+  "count": 0,
+  "isCheck": false
+}, {
+  "id": 2,
+  "name": "香蕉",
+  "price": 15,
+  "count": 0,
+  "isCheck": false
+}, {
+  "id": 3,
+  "name": "梨",
+  "price": 20,
+  "count": 0,
+  "isCheck": false
+}]
