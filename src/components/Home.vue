@@ -1,55 +1,54 @@
 <template>
-  <div class="Home">
-     <div class="product" v-for="(item, ind) in data" :key="ind">
-      <div class="phone">{{item.name}}</div>
-      <div class="phoneBtn">
-        <button class="delBtn btn" @click="delBtn(ind)">-</button>
-        <span>{{item.count}}</span>
-        <button class="addBtn btn" @click="addBtn(ind)">+</button>
-      </div>
-    </div>
+  <div class="thisIsHome">
+    <el-container>
+      <el-header>Header</el-header>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-main>
+          <router-view />
+          <el-footer>footer</el-footer>
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
 
 <script>
-// import echarts from "echarts";
-// import "../../node_modules/echarts/dist/extension/bmap.min.js";
 export default {
-  name: "HelloWorld",
-  data() {
-    return {
-
-    };
-  },
-  computed:{
-    data(){
-      return  this.$store.state.shopCarList
-    }
-  },
-  methods: {
-    delBtn(ind){
-      this.$store.commit('delCount',ind)
-    },
-    addBtn(ind){
-      this.$store.commit('addCount',ind)
-    }
-  },
-  mounted() {
-    // console.log(this.$store.commit('addCount',ind))
-    console.log(this.$store.state.shopCarList)
-  },
-};
+  name: 'home'
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.Home {
-  position: relative;
-  left: 50%;
-  width: 90%;
-  height: 600px;
-  margin-left: -45%;
-  box-shadow: 0 0 8px #fbd157;
-  border-radius: 10px;
+<style lang="scss" scoped>
+.thisIsHome {
+  height: 100%;
+  .el-container {
+    height: 100%;
+    .el-header {
+      height: 44px;
+      color: #000;
+    }
+
+    .el-aside {
+      height: 100%;
+      background-color: #d3dce6;
+      color: #333;
+      text-align: center;
+    }
+
+    .el-main {
+      background-color: #e9eef3;
+      color: #333;
+      flex: 1;
+      text-align: center;
+      position: relative;
+      .el-footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+      // line-height: 160px;
+    }
+  }
 }
 </style>
